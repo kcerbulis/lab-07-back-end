@@ -58,4 +58,5 @@ function search_weather() {
   return weather_array;
 }
 
+// Leave this on the last line allways
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
