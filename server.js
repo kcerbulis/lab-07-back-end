@@ -4,6 +4,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 const express = require('express');
 const cors = require('cors');
+const superagent = require('superagent');
 
 const app = express();
 app.use(cors());
@@ -25,6 +26,9 @@ app.get('/location', (request, response) => {
 })
 
 app.get('/weather', (request, response) => {
+  // superagent.get(`https://api.darksky.net/forecast/${process.env.DARKSKY_API_KEY}/${request.query.data.latitude},${request.query.data.longitude}`).then(result => {
+  //   console.log(result.body);
+  // })
   response.send(search_weather());
 })
 
