@@ -26,10 +26,10 @@ app.get('/location', (request, response) => {
 })
 
 app.get('/weather', (request, response) => {
-  superagent.get(`https://api.darksky.net/forecast/${process.env.DARKSKY_API_KEY}/${request.query.data.latitude},${request.query.data.longitude}`).then(result => {
-    console.log(result.body);
-  })
-  // response.send(search_weather());
+  // superagent.get(`https://api.darksky.net/forecast/${process.env.DARKSKY_API_KEY}/${request.query.data.latitude},${request.query.data.longitude}`).then(result => {
+  //   console.log(result.body);
+  // })
+  response.send(search_weather());
 })
 
 app.use('*', (request, response) => response.send('Sorry, that route does not exist.'))
