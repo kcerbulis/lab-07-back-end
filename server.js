@@ -32,6 +32,8 @@ app.get('/weather', (request, response) => {
   response.send(search_weather());
 })
 
+// app.get('/meetups', (request, response))
+
 app.use('*', (request, response) => response.send('Sorry, that route does not exist.'))
 
 // Pulling location data from the Google Geo Api
