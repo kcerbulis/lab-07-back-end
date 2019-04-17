@@ -43,7 +43,9 @@ function search_location(front_end_query) {
   return location_object;
 }
 
+// Pulling weather data from DarkSky API
 function search_weather() {
+  // Do not need front_end_query defined in the parameter since it's already defined as a global variable
   const weather_data = require('./data/darksky.json');
   const weather_array = [];
 
