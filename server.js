@@ -17,7 +17,7 @@ function Geo_data_object(search_query, formatted_query, latitude, longitude) {
 
 function Weather_data_object(forecast, time) {
   this.forecast = forecast;
-  this.time = new Date(time);
+  this.time = new Date(time * 1000);
 }
 
 app.get('/location', (request, response) => {
@@ -47,23 +47,11 @@ function search_weather() {
   const weather_data = require('./data/darksky.json');
   const weather_array = [];
 
-
   for (let i = 0; i < 8; i++) {
     const forecast = weather_data.daily.data[i].summary;
     const time = weather_data.daily.data[i].time;
     weather_array.push(new Weather_data_object(forecast, time));
   }
-
-  // [{
-  //   'forecast': 'Partly cloudy until afternoon.',
-  //   'time': 'Mon Jan 01 2001'
-  // },
-  // {
-  //   'forecast': 'Mostly cloudy in the morning.',
-  //   'time': 'Tue Jan 02 2001'
-  // }
-  // ];
-
   return weather_array;
 }
 
