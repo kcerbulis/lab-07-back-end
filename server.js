@@ -30,6 +30,7 @@ app.get('/weather', (request, response) => {
 
 app.use('*', (request, response) => response.send('Sorry, that route does not exist.'))
 
+// Pulling location data from the Google Geo Api
 function search_location(front_end_query) {
   const search_query = front_end_query;
 
