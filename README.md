@@ -1,6 +1,6 @@
 # Lab 06 - City Explorer Back End  
   
-**Authors**: Morgana Spake, Jon Ramer  
+**Authors**: Morgana Spake, Jon Ramer && Krisjanis Cerbulis, Jon Ramer  
 **Version**: 1.0.0  
   
 ## Overview  
@@ -27,6 +27,11 @@ Third session, get and display weather
 estimated time 1 hr, actual 1 hr 10 min  
 start: 11:45  
 end: 12:55  
+
+Forth session, Weather and Meetup API
+estimated time 1 hr, actual  
+start: 12:00  
+end:  
   
 ## Credits and Collaborations  
 Morgana Spake, majority of the brain juice  
