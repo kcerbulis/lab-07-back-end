@@ -30,6 +30,7 @@ app.get('/weather', (request, response) => {
 
 app.use('*', (request, response) => response.send('Sorry, that route does not exist.'))
 
+// Pulling location data from the Google Geo Api
 function search_location(front_end_query) {
   const search_query = front_end_query;
 
@@ -43,7 +44,9 @@ function search_location(front_end_query) {
   return location_object;
 }
 
+// Pulling weather data from DarkSky API
 function search_weather() {
+  // Do not need front_end_query defined in the parameter since it's already defined as a global variable
   const weather_data = require('./data/darksky.json');
   const weather_array = [];
 
@@ -55,4 +58,5 @@ function search_weather() {
   return weather_array;
 }
 
+// Leave this on the last line allways
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
